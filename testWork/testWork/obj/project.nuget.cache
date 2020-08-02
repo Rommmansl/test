@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hKRftW7hejC3sUzjUc9NzLCWN6BX+IviMkC6oP6s1GWR8qct6qHG91bHI/T3iTjYMZXOv52FNa82B2HPhuY5Cg==",
+  "dgSpecHash": "x2sAq4Q1AWWfRRZQenz/VKfcUVBwC7Hz6vbuHYTpCLaLYe41YzCSMhtZPNvYOjepHlL6CZBDfB7nCugf6SyFvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\1\\source\\repos\\Rommmansl\\test\\testWork\\testWork\\testWork.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\1\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
