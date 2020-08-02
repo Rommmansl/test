@@ -1,0 +1,20 @@
+[
+  {
+    "positon":"manager",
+    "salary": "150000",
+    "bonus": "0"
+  },
+  {
+    "positon":"technician",
+    "salary": "35000",
+    "bonus": "5000",
+    "category": "A"
+  },
+  {
+    "positon":"driver",
+    "salary": "250",
+    "bonus": "10000",
+    "timeWorked": "80",
+    "category": "B"
+  }
+]

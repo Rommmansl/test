@@ -5,11 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using test.Models;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using testWork.Models;
 
 namespace test.Controllers
 {
@@ -36,11 +36,11 @@ namespace test.Controllers
             {
                 int salaries = 0;
                 string path = uploadedFile.FileName;
-                using (var fileStream = new FileStream("C:/Users/1/source/repos/test/test/wwwroot/" + path, FileMode.Create))
+                using (var fileStream = new FileStream("C:/wwwroot/" + path, FileMode.Create))
                 {
                     await uploadedFile.CopyToAsync(fileStream);
                 }
-                StreamReader sr = new StreamReader("C:/Users/1/source/repos/test/test/wwwroot/" + path);
+                StreamReader sr = new StreamReader("C:/wwwroot/" + path);
                 string jsonString = sr.ReadToEnd();
 
                 dynamic files = JsonConvert.DeserializeObject(jsonString);
@@ -75,9 +75,9 @@ namespace test.Controllers
             return View();
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
